@@ -174,10 +174,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
             child: StyledText(
               text: '<bold>$currentLength</bold>/$maxLength',
-              style: getTextTheme(context).caption,
+              style: getTextTheme(context).bodySmall,
               tags: {
                 'bold': StyledTextTag(
-                  style: getTextTheme(context).caption!.apply(
+                  style: getTextTheme(context).bodySmall!.apply(
                         fontWeightDelta: 1,
                         color: widget.minLength != null && currentLength < widget.minLength!
                             ? $constants.palette.red.withOpacity(0.5)
@@ -211,7 +211,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 children: [
                   ReactiveTextField(
                     showErrors: widget.showErrors ? null : (_) => false,
-                    controller: widget.staticValue.isNotEmpty ? TextEditingController(text: widget.staticValue) : null,
+                    controller: widget.staticValue.isNotEmpty
+                        ? TextEditingController(text: widget.staticValue)
+                        : null,
                     readOnly: widget.readOnly,
                     obscureText: widget.obscureText,
                     onTap: widget.onTap,
@@ -227,7 +229,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                           .errors
                           .form
                           .maxLength(field: widget.labelText, count: widget.maxLength.toString()),
-                      ValidationMessage.required: (_) => context.t.core.errors.form.required(field: widget.labelText),
+                      ValidationMessage.required: (_) =>
+                          context.t.core.errors.form.required(field: widget.labelText),
                       ValidationMessage.email: (_) => context.t.core.errors.form.email,
                     },
                     maxLength: widget.maxLength,
@@ -235,8 +238,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     minLines: widget.minLines,
                     keyboardType: widget.keyboardType,
                     textCapitalization: widget.textCapitalization,
-                    buildCounter: (context, {required int currentLength, required bool isFocused, int? maxLength}) {
-                      return buildCounter(context, currentLength: currentLength, maxLength: maxLength);
+                    buildCounter: (context,
+                        {required int currentLength, required bool isFocused, int? maxLength}) {
+                      return buildCounter(context,
+                          currentLength: currentLength, maxLength: maxLength);
                     },
                     decoration: getTextFieldDecoration(form),
                     inputFormatters: widget.inputFormatters,
@@ -262,7 +267,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
                               padding: const EdgeInsets.only(left: 8),
                               child: Text(
                                 widget.extraInfo,
-                                style: getTextTheme(context).caption!.copyWith(fontStyle: FontStyle.italic),
+                                style: getTextTheme(context)
+                                    .bodySmall!
+                                    .copyWith(fontStyle: FontStyle.italic),
                               ),
                             ),
                           ),

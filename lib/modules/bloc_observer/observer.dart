@@ -8,7 +8,7 @@ class Observer extends BlocObserver {
   @override
   void onCreate(BlocBase<dynamic> bloc) {
     super.onCreate(bloc);
-    logIt.info('onCreate -- ${bloc.runtimeType}');
+    logIt.info('onCreate bloc -- ${bloc.runtimeType}');
   }
 
   void stateToSentry(

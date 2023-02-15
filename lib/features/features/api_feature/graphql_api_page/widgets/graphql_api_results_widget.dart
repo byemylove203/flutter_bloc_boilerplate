@@ -38,7 +38,10 @@ class GraphQLApiResultsWidget extends StatelessWidget {
 
               if (index == posts.length - 1 && posts.length < total) {
                 tile = Column(
-                  children: [tile, const Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator())],
+                  children: [
+                    tile,
+                    const Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator()),
+                  ],
                 );
               }
 

@@ -6,7 +6,9 @@ import 'package:logger/logger.dart';
 class LoggingHelper {
   final Logger logIt = Logger(
     printer: PrettyPrinter(
+      colors: false,
       methodCount: 0,
+      // NoBoxingByDefault: true,.
     ),
   );
 

@@ -50,6 +50,7 @@ class AuthRepository {
     try {
       // TODO: Implement custom logout operation with auth model.
       print(auth);
+
       return DC.data(null);
     } catch (e) {
       return DC.error(AlertModel.quiet());
