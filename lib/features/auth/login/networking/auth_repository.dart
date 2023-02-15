@@ -21,8 +21,9 @@ class AuthRepository {
     // Where error is catched and the returned error message is parsed to
     // create alert. But for the demo I will create alert without localization.
 
-    final isIdPwCorrect = username == 'test' && password == 'test';
+    // final isIdPwCorrect = username == 'test' && password == 'test';
 
+    final isIdPwCorrect = username.isNotEmpty && password.isNotEmpty;
     if (isIdPwCorrect) {
       final user = UserModel.initial();
       final auth = AuthModel(
@@ -48,7 +49,7 @@ class AuthRepository {
   Future<DC<AlertModel, void>> logout({required AuthModel auth}) async {
     try {
       // TODO: Implement custom logout operation with auth model.
-
+      print(auth);
       return DC.data(null);
     } catch (e) {
       return DC.error(AlertModel.quiet());

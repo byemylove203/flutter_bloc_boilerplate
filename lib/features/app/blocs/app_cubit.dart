@@ -50,9 +50,12 @@ class AppCubit extends HydratedCubit<AppState> {
   void updateSystemOverlay() {
     final systemModeIsDark = SchedulerBinding.instance.window.platformBrightness == Brightness.dark;
 
-    final isDark = state.theme.mode == ThemeMode.system ? systemModeIsDark : state.theme.mode == ThemeMode.dark;
+    final isDark = state.theme.mode == ThemeMode.system
+        ? systemModeIsDark
+        : state.theme.mode == ThemeMode.dark;
     final colorScheme = isDark ? state.theme.dark.colorScheme : state.theme.light.colorScheme;
-    final primaryColor = ElevationOverlay.colorWithOverlay(colorScheme.surface, colorScheme.primary, 3);
+    final primaryColor =
+        ElevationOverlay.colorWithOverlay(colorScheme.surface, colorScheme.primary, 3);
 
     SystemChrome.setSystemUIOverlayStyle(
       createOverlayStyle(

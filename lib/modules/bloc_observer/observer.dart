@@ -46,7 +46,7 @@ class Observer extends BlocObserver {
     } else {
       final errorState = Breadcrumb(
         category: 'bloc',
-        message: "onError | (${bloc.runtimeType}'s state) - ${error.toString()}",
+        message: "onError | (${bloc.runtimeType}'s state) - $error",
       );
 
       Sentry.addBreadcrumb(errorState);

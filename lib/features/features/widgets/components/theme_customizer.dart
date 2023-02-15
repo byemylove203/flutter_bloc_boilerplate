@@ -71,13 +71,15 @@ class ThemeCustomizer extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    ListView.builder(
-                      itemCount: $constants.palette.themes.length,
-                      scrollDirection: Axis.horizontal,
-                      shrinkWrap: true,
-                      itemBuilder: (_, index) {
-                        return buildColor(index: index, disabled: disabled);
-                      },
+                    Flexible(
+                      child: ListView.builder(
+                        itemCount: $constants.palette.themes.length,
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemBuilder: (_, index) {
+                          return buildColor(index: index, disabled: disabled);
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -116,27 +118,27 @@ class ThemeCustomizer extends StatelessWidget {
   }
 }
 
-class SelectedColor extends StatelessWidget {
-  const SelectedColor({super.key, required this.selectedColor, this.icon, this.iconColor});
-  final Color selectedColor;
-  final IconData? icon;
-  final Color? iconColor;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 36,
-      height: 36,
-      decoration: BoxDecoration(
-        color: selectedColor,
-        shape: BoxShape.circle,
-      ),
-      child: icon != null
-          ? Icon(
-              icon,
-              color: iconColor,
-              size: 22,
-            )
-          : null,
-    );
-  }
-}
+// class SelectedColor extends StatelessWidget {
+//   const SelectedColor({super.key, required this.selectedColor, this.icon, this.iconColor});
+//   final Color selectedColor;
+//   final IconData? icon;
+//   final Color? iconColor;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 36,
+//       height: 36,
+//       decoration: BoxDecoration(
+//         color: selectedColor,
+//         shape: BoxShape.circle,
+//       ),
+//       child: icon != null
+//           ? Icon(
+//               icon,
+//               color: iconColor,
+//               size: 22,
+//             )
+//           : null,
+//     );
+//   }
+// }

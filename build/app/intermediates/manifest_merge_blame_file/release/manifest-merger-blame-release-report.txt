@@ -1,0 +1,173 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_advanced_boilerplate"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml
+10
+11    <!-- Permissions options for the `storage` group -->
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:5:5-79
+12-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:5:22-77
+13    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+13-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:6:5-76
+13-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:6:22-73
+14
+15    <queries>
+15-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:43:5-49:15
+16
+17        <!-- If your app opens https URLs -->
+18        <intent>
+18-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:45:9-48:18
+19            <action android:name="android.intent.action.VIEW" />
+19-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:46:13-65
+19-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:46:21-62
+20
+21            <data android:scheme="https" />
+21-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:47:13-44
+21-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:47:19-41
+22        </intent>
+23    </queries>
+24
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->[:connectivity_plus] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+25-->[:connectivity_plus] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-76
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:9:5-67
+26-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:9:22-64
+27
+28    <application
+29        android:name="android.app.Application"
+29-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:10:9-42
+30        android:allowBackup="false"
+30-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:12:9-36
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.8.0] /Users/khanhquoc/.gradle/caches/transforms-3/d363e3b5616f580c766e3e2b3c05f27d/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+32        android:fullBackupContent="@xml/backup_rules"
+32-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:13:9-54
+33        android:icon="@mipmap/ic_launcher"
+33-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:11:9-43
+34        android:label="flutter_advanced_boilerplate" >
+34-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:9:9-53
+35
+36        <!-- By default Android backups data on Google Drive. It can cause exception java.security.InvalidKeyException:Failed to unwrap key while using flutter_secure_storage so two lines above fixes this. -->
+37        <activity
+37-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:15:9-35:20
+38            android:name="com.example.flutter_advanced_boilerplate.MainActivity"
+38-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:16:13-41
+39            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+39-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:20:13-163
+40            android:exported="true"
+40-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:17:13-36
+41            android:hardwareAccelerated="true"
+41-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:21:13-47
+42            android:launchMode="singleTop"
+42-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:18:13-43
+43            android:theme="@style/LaunchTheme"
+43-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:19:13-47
+44            android:windowSoftInputMode="adjustResize" >
+44-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:22:13-55
+45
+46            <!--
+47                 Specifies an Android theme to apply to this Activity as soon as
+48                 the Android process has started. This theme is visible to the user
+49                 while the Flutter UI initializes. After that, this theme continues
+50                 to determine the Window background behind the Flutter UI.
+51            -->
+52            <meta-data
+52-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:27:13-30:17
+53                android:name="io.flutter.embedding.android.NormalTheme"
+53-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:28:15-70
+54                android:resource="@style/NormalTheme" />
+54-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:29:15-52
+55
+56            <intent-filter>
+56-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:31:13-34:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:32:17-68
+57-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:32:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:33:17-76
+59-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:33:27-74
+60            </intent-filter>
+61        </activity>
+62        <!--
+63             Don't delete the meta-data below.
+64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+65        -->
+66        <meta-data
+66-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:38:9-40:33
+67            android:name="flutterEmbedding"
+67-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:39:13-44
+68            android:value="2" />
+68-->/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/android/app/src/main/AndroidManifest.xml:40:13-30
+69
+70        <provider
+70-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-18:20
+71            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+71-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-82
+72            android:authorities="com.example.flutter_advanced_boilerplate.flutter.image_provider"
+72-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-74
+73            android:exported="false"
+73-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-37
+74            android:grantUriPermissions="true" >
+74-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-47
+75            <meta-data
+75-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-17:75
+76                android:name="android.support.FILE_PROVIDER_PATHS"
+76-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:16:17-67
+77                android:resource="@xml/flutter_image_picker_file_paths" />
+77-->[:image_picker_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:17:17-72
+78        </provider>
+79
+80        <activity
+80-->[:url_launcher_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-13:74
+81            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+81-->[:url_launcher_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
+82            android:exported="false"
+82-->[:url_launcher_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
+83            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+83-->[:url_launcher_android] /Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-71
+84
+85        <uses-library
+85-->[androidx.window:window:1.0.0-beta04] /Users/khanhquoc/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+86            android:name="androidx.window.extensions"
+86-->[androidx.window:window:1.0.0-beta04] /Users/khanhquoc/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+87            android:required="false" />
+87-->[androidx.window:window:1.0.0-beta04] /Users/khanhquoc/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+88        <uses-library
+88-->[androidx.window:window:1.0.0-beta04] /Users/khanhquoc/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+89            android:name="androidx.window.sidecar"
+89-->[androidx.window:window:1.0.0-beta04] /Users/khanhquoc/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+90            android:required="false" />
+90-->[androidx.window:window:1.0.0-beta04] /Users/khanhquoc/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+91
+92        <provider
+92-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:18:9-22:39
+93            android:name="io.sentry.android.core.SentryPerformanceProvider"
+93-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:19:13-76
+94            android:authorities="com.example.flutter_advanced_boilerplate.SentryPerformanceProvider"
+94-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:20:13-77
+95            android:exported="false"
+95-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:21:13-37
+96            android:initOrder="200" />
+96-->[io.sentry:sentry-android-core:6.13.0] /Users/khanhquoc/.gradle/caches/transforms-3/c7af9288c3bb48121b0b356ada61c91b/transformed/jetified-sentry-android-core-6.13.0/AndroidManifest.xml:22:13-36
+97        <provider
+97-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/khanhquoc/.gradle/caches/transforms-3/3fc716d9e813218eb1841fbd4ab368e3/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+98            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+98-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/khanhquoc/.gradle/caches/transforms-3/3fc716d9e813218eb1841fbd4ab368e3/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+99            android:authorities="com.example.flutter_advanced_boilerplate.lifecycle-process"
+99-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/khanhquoc/.gradle/caches/transforms-3/3fc716d9e813218eb1841fbd4ab368e3/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+100            android:exported="false"
+100-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/khanhquoc/.gradle/caches/transforms-3/3fc716d9e813218eb1841fbd4ab368e3/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+101            android:multiprocess="true" />
+101-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/khanhquoc/.gradle/caches/transforms-3/3fc716d9e813218eb1841fbd4ab368e3/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+102    </application>
+103
+104</manifest>

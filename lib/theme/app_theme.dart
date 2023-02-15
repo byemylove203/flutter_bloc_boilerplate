@@ -22,7 +22,8 @@ Future<ThemeData> createTheme({
   final appTypography = AppTypography.create(fontFamily: $constants.theme.defaultFontFamily);
   final textTheme = _getTextTheme(appTypography: appTypography, brightness: brightness);
 
-  final primaryColor = ElevationOverlay.colorWithOverlay(appColorScheme.surface, appColorScheme.primary, 3);
+  final primaryColor =
+      ElevationOverlay.colorWithOverlay(appColorScheme.surface, appColorScheme.primary, 3);
   final customOnPrimaryColor = appColorScheme.primary.withOpacity(0.5);
 
   return ThemeData(

@@ -1,0 +1,4 @@
+#Wed Feb 15 10:26:55 ICT 2023
+base.0=/Users/khanhquoc/Documents/template/flutter_bloc_boilerplate/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

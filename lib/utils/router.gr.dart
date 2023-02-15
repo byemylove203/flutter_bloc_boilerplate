@@ -21,8 +21,7 @@ import '../features/auth/login/blocs/auth_cubit.dart' as _i6;
 import '../features/auth/login/presentation/login_screen.dart' as _i2;
 
 class AppRouter extends _i4.RootStackRouter {
-  AppRouter([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+  AppRouter([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey]) : super(navigatorKey);
 
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
@@ -33,8 +32,8 @@ class AppRouter extends _i4.RootStackRouter {
       );
     },
     LoginScreenRoute.name: (routeData) {
-      final args = routeData.argsAs<LoginScreenRouteArgs>(
-          orElse: () => const LoginScreenRouteArgs());
+      final args =
+          routeData.argsAs<LoginScreenRouteArgs>(orElse: () => const LoginScreenRouteArgs());
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i2.LoginScreen(

@@ -18,7 +18,7 @@ class App extends StatelessWidget {
     return StatsFl(
       maxFps: 120,
       align: Alignment.bottomRight,
-      isEnabled: env.debug,
+      isEnabled: false,
       child: BlocProvider(
         create: (context) => getIt<AppCubit>(),
         child: BlocBuilder<AppCubit, AppState>(
@@ -47,7 +47,7 @@ class App extends StatelessWidget {
 
               /// EasyLocalization configuration.
               locale: TranslationProvider.of(context).flutterLocale,
-              supportedLocales: LocaleSettings.supportedLocales,
+              supportedLocales: AppLocaleUtils.supportedLocales,
               localizationsDelegates: const [
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
