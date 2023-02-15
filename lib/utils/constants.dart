@@ -10,7 +10,7 @@ final $constants = Constants();
 
 @immutable
 class Constants {
-  final appTitle = 'Flutter Advanced Boilerplate';
+  final appTitle = 'Flutter BLoc Boilerplate';
 
   /// Theme defaults.
   late final theme = _Theme();
