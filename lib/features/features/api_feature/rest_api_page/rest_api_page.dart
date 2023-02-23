@@ -21,7 +21,7 @@ class _RestApiPageState extends State<RestApiPage> {
 
   @override
   void initState() {
-    _pagingController.addPageRequestListener(_cubit.getPosts);
+    _pagingController.addPageRequestListener(_cubit.getNotification);
     super.initState();
   }
 

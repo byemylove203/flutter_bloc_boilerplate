@@ -16,13 +16,13 @@ class GetPoststRestCubit extends Cubit<GetPostsRestState> {
 
   final PostsRestRepository _postsRestRepository;
 
-  Future<void> getPosts(
+  Future<void> getNotification(
     int page, {
     int? size,
   }) async {
     emit(const GetPostsRestState.loading());
 
-    final response = await _postsRestRepository.getPosts(
+    final response = await _postsRestRepository.getNotification(
       page,
       size ?? $constants.api.maxItemToBeFetchedAtOneTime,
     );

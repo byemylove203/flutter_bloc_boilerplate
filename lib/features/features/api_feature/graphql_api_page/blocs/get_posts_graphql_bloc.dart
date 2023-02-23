@@ -38,7 +38,8 @@ class GetPostsGraphQLBloc extends QueryBloc<PostsPaginated$Query> {
         final posts = data?.posts?.data ?? [];
 
         if (posts.isNotEmpty && posts.length < total) {
-          return posts.length % $constants.api.maxItemToBeFetchedAtOneTime == 0 && i == posts.length - threshold;
+          return posts.length % $constants.api.maxItemToBeFetchedAtOneTime == 0 &&
+              i == posts.length - threshold;
         }
 
         return false;
@@ -63,8 +64,10 @@ class GetPostsGraphQLBloc extends QueryBloc<PostsPaginated$Query> {
             ),
           ).toJson(),
           updateQuery: (previousResultData, fetchMoreResultData) {
-            final prevResultData = (previousResultData?['posts'] as Map<String, dynamic>)['data'] as List<dynamic>;
-            final moreResultData = (fetchMoreResultData?['posts'] as Map<String, dynamic>)['data'] as List<dynamic>;
+            final prevResultData =
+                (previousResultData?['posts'] as Map<String, dynamic>)['data'] as List<dynamic>;
+            final moreResultData =
+                (fetchMoreResultData?['posts'] as Map<String, dynamic>)['data'] as List<dynamic>;
 
             final repos = <dynamic>[...prevResultData, ...moreResultData];
 

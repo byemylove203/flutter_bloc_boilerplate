@@ -238,10 +238,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     minLines: widget.minLines,
                     keyboardType: widget.keyboardType,
                     textCapitalization: widget.textCapitalization,
-                    buildCounter: (context,
-                        {required int currentLength, required bool isFocused, int? maxLength}) {
-                      return buildCounter(context,
-                          currentLength: currentLength, maxLength: maxLength);
+                    buildCounter: (
+                      context, {
+                      required int currentLength,
+                      required bool isFocused,
+                      int? maxLength,
+                    }) {
+                      return buildCounter(
+                        context,
+                        currentLength: currentLength,
+                        maxLength: maxLength,
+                      );
                     },
                     decoration: getTextFieldDecoration(form),
                     inputFormatters: widget.inputFormatters,

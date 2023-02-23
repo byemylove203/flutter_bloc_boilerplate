@@ -12,7 +12,7 @@ class PostsRestRepository {
 
   final Dio _dioClient;
 
-  Future<DC<AlertModel, PaginatedModel<PostRestModel>>> getPosts(
+  Future<DC<AlertModel, PaginatedModel<PostRestModel>>> getNotification(
     int page,
     int size,
   ) async {
@@ -30,11 +30,15 @@ class PostsRestRepository {
         },
       );
 
-      final data = (response.data?['data'] as Map<String, dynamic>)['posts'] as Map<String, dynamic>;
-      final posts = (data['data'] as List).map((p) => PostRestModel.fromJson(p as Map<String, dynamic>)).toList();
+      final data =
+          (response.data?['data'] as Map<String, dynamic>)['posts'] as Map<String, dynamic>;
+      final posts = (data['data'] as List)
+          .map((p) => PostRestModel.fromJson(p as Map<String, dynamic>))
+          .toList();
       final total = (data['meta'] as Map<String, dynamic>)['totalCount'] as int;
 
-      final paginatedPosts = PaginatedModel(currentPage: page, size: size, total: total, items: posts);
+      final paginatedPosts =
+          PaginatedModel(currentPage: page, size: size, total: total, items: posts);
 
       /* final paginatedPosts = PaginatedModel<PostRestModel>.fromJson(
         response.data ?? {},
