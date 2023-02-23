@@ -1,7 +1,9 @@
 {
   "navigation": {
     "bottom": {
-      "informations": "Bilgiler"
+      "informations": "Bilgiler",
+      "main": "Main",
+      "features": "Features"
     }
   },
   "form": {

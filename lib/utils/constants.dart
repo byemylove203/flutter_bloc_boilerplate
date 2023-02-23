@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_boilerplate/features/auth/login/blocs/auth_cubit.dart';
+import 'package:flutter_advanced_boilerplate/features/canvas/canvas_screen.dart';
 import 'package:flutter_advanced_boilerplate/features/features/features_screen.dart';
 import 'package:flutter_advanced_boilerplate/features/informations/informations_screen.dart';
 import 'package:flutter_advanced_boilerplate/i18n/strings.g.dart';
@@ -120,7 +121,8 @@ class _API {
 @immutable
 class _Navigation {
   /// Appbar configuration.
-  List<AppBar> appbars(BuildContext context) => [
+  List<AppBar?> appbars(BuildContext context) => [
+        null,
         AppBar(
           leading: IconButton(
             onPressed: () => getIt<AuthCubit>().logOut(),
@@ -139,11 +141,19 @@ class _Navigation {
 
   /// Bottom navigation configuration.
   List<Widget> bottomNavigationScreens() => const [
+        CanvasScreen(),
         FeaturesScreen(),
         InformationsScreen(),
       ];
 
   List<NavigationDestination> bottomNavigationItems(BuildContext context) => [
+        NavigationDestination(
+          icon: const Icon(
+            MdiIcons.map,
+            size: 24,
+          ),
+          label: context.t.core.navigation.bottom.main,
+        ),
         NavigationDestination(
           icon: const Icon(
             MdiIcons.fire,
