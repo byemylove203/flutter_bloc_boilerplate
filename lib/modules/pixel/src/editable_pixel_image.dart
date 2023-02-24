@@ -53,6 +53,7 @@ class _EditablePixelImageState extends State<EditablePixelImage> {
               final y = widget.controller.height * yLocal ~/ constraints.maxHeight;
 
               if (widget.onTappedPixel != null) {
+                // ignore: prefer_null_aware_method_calls
                 widget.onTappedPixel!(
                   PixelTapDetails._(
                     x: x,
@@ -96,6 +97,10 @@ class PixelTapDetails {
 
   /// Position in coordinates local to the Widget itself.
   final Offset localPosition;
+
+  void log() {
+    print('x: $x \n y: $y \n index: $index  \n localPosition $localPosition');
+  }
 }
 
 class _PixelImageValue {
@@ -184,6 +189,7 @@ class PixelImageController extends ValueNotifier<_PixelImageValue> {
     required int colorIndex,
   }) {
     _pixelBytes[pixelIndex] = colorIndex;
+
     _update();
   }
 

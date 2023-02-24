@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_null_aware_method_calls
+
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_boilerplate/modules/pixel/pixel.dart';
 
@@ -41,6 +43,7 @@ class _PixelEditorState extends State<PixelEditor> {
           direction: isHorizontal ? Axis.horizontal : Axis.vertical,
           mainAxisSize: MainAxisSize.min,
           children: [
+            // Phần bảng màu, sau tách riêng ra khỏi phần ảnh để tránh việc zoom phóng to cả màn.
             PixelColorPicker(
               direction: isHorizontal ? Axis.vertical : Axis.horizontal,
               palette: widget.controller.palette,
@@ -59,14 +62,12 @@ class _PixelEditorState extends State<PixelEditor> {
                   x: details.x,
                   y: details.y,
                 );
-                if (widget.onSetPixel != null) {
-                  widget.onSetPixel!(
-                    SetPixelDetails._(
-                      tapDetails: details,
-                      colorIndex: _selectedColor,
-                    ),
-                  );
-                }
+                widget.onSetPixel?.call!(
+                  SetPixelDetails._(
+                    tapDetails: details,
+                    colorIndex: _selectedColor,
+                  ),
+                );
               },
             ),
           ],

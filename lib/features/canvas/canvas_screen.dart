@@ -6,35 +6,39 @@ import 'package:flutter_advanced_boilerplate/modules/pixel/src/pixel_palette.dar
 
 class CanvasScreen extends StatelessWidget {
   const CanvasScreen({super.key});
+  ByteData emptyPixels() {
+    // Thay bằng gọi api để lấy ra initial state của bàn.
+    final bytes = Uint8List(12 * 12);
+
+    return bytes.buffer.asByteData();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height.toInt() - 64;
-    final width = MediaQuery.of(context).size.width.toInt();
-    ByteData _emptyPixels() {
-      final bytes = Uint8List(height * width);
-
-      return bytes.buffer.asByteData();
-    }
-
     final controller = PixelImageController(
-      pixels: _emptyPixels(),
+      pixels: emptyPixels(),
       palette: const PixelPalette.rPlace(),
-      width: width,
-      height: height,
+      width: 12,
+      height: 12,
     );
 
     return Scaffold(
-      // appBar: AppBar(),
-      // color: Theme.of(context).colorScheme.background,
-      body: InteractiveViewer(
-        constrained: false,
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          child: PixelEditor(controller: controller),
+      appBar: AppBar(),
+      backgroundColor: Theme.of(context).colorScheme.background,
+      body: Center(
+        child: Column(
+          children: [
+            PixelEditor(
+              controller: controller,
+              onSetPixel: (details) {
+                // Thay bằng api lưu vị trí chi tiết.
+
+                print(controller.pixels.buffer.asUint8List());
+                // TODO: Lưu pixels vào local storage rồi load ra.
+              },
+            ),
+          ],
         ),
-        maxScale: 40,
       ),
     );
   }
